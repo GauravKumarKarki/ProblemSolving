@@ -11,7 +11,7 @@ import java.lang.Math;
  *
  * @author PREDATOR
  */
-public class problemSolving {
+public class IntegerSequenceCheck {
     public static void main(String[]args){
         int[] array={0,2,3,4,5,7,8,9,10,11};
         cn(array);
