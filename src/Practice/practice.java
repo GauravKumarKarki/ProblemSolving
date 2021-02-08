@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author PREDATOR
  */
-public class BinaryAddition {
+public class practice {
     public static void main (String[]args){
         int[]first={1,1,1,0,0,0};
         int[]second={1,1,0,0};
