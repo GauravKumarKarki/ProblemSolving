@@ -5,7 +5,7 @@
  */
 package Practice;
 import java.util.*;
-import java.lang.Math;
+
 
 /**
  *
@@ -18,29 +18,23 @@ public class problemSolving {
     }
     
     public static void cn(int[] array){
-        int sequence=0;
-        int index=0;
-        ArrayList<Integer> result= new ArrayList<>();
-        Object[] actual= new Object[result.size()];
-        while(index<array.length){
-           if(index+1>array.length-1){
-               index++;
-           }else{ 
-                if(array[index]+1==array[index+1]){
-                    sequence+=1;
-                    index++;
-                }else{
-                    
-                    result.add(sequence);
-                    index++;
-                }
-          }
+        int sequence=1;
+//        int index=0;
+        int x=0;
+        int y=0;
+        Stack<Integer> result=new Stack<>();
+        for(int index=0;index<array.length-2;index++){
+            x=array[index+1];
+            y=array[index+2];
+            if(x+1==y+1){
+                sequence+=1;
+            }else{
+                result.push(sequence);
+                sequence=0;
+            }
         }
-        actual=result.toArray();
-           
-//        for(int i=0;i<result.size();i++){
-//            actual[i]=result.pop();
-//        }
-        System.out.println(Arrays.toString(actual));
+//        System.out.println(index);
+        System.out.println(result);
+
     }
 }    
