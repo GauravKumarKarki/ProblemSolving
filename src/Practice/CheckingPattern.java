@@ -25,7 +25,7 @@ public class CheckingPattern {
         int asterikPosition=0;
         int dotPosition=0;
         int charIndex=0;
-        String changedPattern=null;
+        String changedPattern="";
         
         if(pattern.equals(input)){
             System.out.println("The pattern "+pattern+" is correct");
@@ -34,7 +34,7 @@ public class CheckingPattern {
                 
                 if(pattern.contains("*")){
                     asterikPosition=pattern.indexOf("*");
-                    changedPattern=pattern.replace("*","a");
+                    changedPattern=pattern.replace('*',pattern.charAt(asterikPosition-1));
                     
                     if(changedPattern.equals(input)){
                         System.out.println("The pattern "+pattern+" is correct");
@@ -44,7 +44,7 @@ public class CheckingPattern {
                     
                 }else{
                     dotPosition=pattern.indexOf(".");
-                    pattern.replace('.',pattern.charAt(dotPosition-1));
+                    changedPattern=pattern.replace('.',pattern.charAt(dotPosition-1));
                     
                     if(changedPattern.equals(input)){
                         System.out.println("The pattern "+pattern+" is correct");
