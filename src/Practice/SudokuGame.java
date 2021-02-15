@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Practice;
+import java.util.*;
 
 /**
  *
@@ -20,8 +21,14 @@ public class SudokuGame {
         int sIndex=0;
         Boolean valid= true;
         int singlecell=3;
+        for(int i=0;i<board.length;i++){
+            for(int j=0;j<board.length;j++){
+                board[i][j]=1;
+            }
+        }
         
-//      main column and row
+        
+      main column and row
         for(int main=0;main<board.length;main++){
             
             // for main row
